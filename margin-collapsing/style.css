@@ -1,0 +1,12 @@
+body {
+  margin: 0; /* its delete margin from browser setiings */
+}
+
+div {
+  margin: 8px;
+  background: red;
+}
+
+p {
+  color: white;
+}
