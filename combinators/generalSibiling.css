@@ -1,0 +1,9 @@
+h2 ~ p {
+  color: red;
+}
+
+/*
+General silbing combinator.
+It works with every sibling on the same level with selector h2.
+P selector can be after or before h2 - it doesn't matter.
+*/

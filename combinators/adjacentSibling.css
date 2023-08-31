@@ -1,0 +1,8 @@
+h2 + p {
+  color: red;
+}
+
+/*
+Adjacent silbing combinator.
+It works only with the closest sibling
+*/

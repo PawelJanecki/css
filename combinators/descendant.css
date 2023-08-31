@@ -1,0 +1,8 @@
+div p {
+  color: red;
+}
+
+/*
+Child combinator.
+It works for every p in div tree.
+*/

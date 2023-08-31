@@ -1,0 +1,8 @@
+div > p {
+  color: red;
+}
+
+/*
+Child combinator.
+P selector works only when p is directly child of div.
+*/
