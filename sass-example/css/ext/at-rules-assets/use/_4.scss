@@ -1,0 +1,7 @@
+$color: #000 !default;
+$text-decoration: underline !default;
+
+use-header {
+  color: $color;
+  text-decoration: $text-decoration;
+}

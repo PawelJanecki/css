@@ -1,0 +1,18 @@
+@use './at-rules-assets/use/1' as u1;
+@use './at-rules-assets/use/2' as *;
+@use './at-rules-assets/use/3' as u3;
+@use './at-rules-assets/use/4' as * with (
+  $color: #555
+);
+@use './at-rules-assets/use/5' as u5;
+
+.use-button {
+  @include u1.mixin-radius;
+  padding: u1.$use-padding;
+  color: $use-color;
+  @include u3.font-size-from-private-variable;
+}
+
+@include u5.configure($color: #555, $border-radius: 0.1rem);
+
+@include u5.styles;

@@ -1,0 +1,5 @@
+$-font-size: 1.1rem;
+
+@mixin font-size-from-private-variable {
+  font-size: $-font-size;
+}

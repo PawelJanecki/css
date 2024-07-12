@@ -1,0 +1,56 @@
+@mixin reset-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@mixin horizontal-list {
+  @include reset-list;
+
+  mixin-li {
+    display: inline-block;
+    margin: {
+      left: -2px;
+      right: 2em;
+    }
+  }
+}
+
+mixin-nav mixin-ul {
+  @include horizontal-list;
+}
+
+@mixin replace-text($image, $x: 50%, $y: 50%) {
+  overflow: hidden;
+
+  text: {
+    indent: -99999em;
+    align: left;
+  }
+
+  background: {
+    image: $image;
+    repeat: no-repeat;
+    position: $x $y;
+  }
+}
+
+.mixin-mail-icon {
+  @include replace-text(url('/images/mail.svg'), 0);
+}
+
+.mixin-mail-tag-icon {
+  @include replace-text(url('/images/mail.svg'), $y: 10%);
+}
+
+@mixin order($height, $selectors...) {
+  @for $i from 0 to length($selectors) {
+    #{nth($selectors, $i + 1)} {
+      position: absolute;
+      height: $height;
+      margin-top: $i * $height;
+    }
+  }
+}
+
+@include order(150px, 'mixin-input.name', 'mixin-input.address', 'mixin-input.zip');

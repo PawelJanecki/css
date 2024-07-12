@@ -1,0 +1,9 @@
+$end-size: 8;
+$current-size: 1;
+
+@while $current-size <= $end-size {
+  while-margin-top-#{$current-size} {
+    margin-top: $current-size * .25rem;
+  }
+  $current-size: $current-size + 1;
+}

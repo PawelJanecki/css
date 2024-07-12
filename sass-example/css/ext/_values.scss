@@ -1,0 +1,59 @@
+// --------- NUMBERS
+
+$font-size: 8px;
+$rounded-size: 2 * 4px;
+
+// --------- STRINGS
+
+$font-family: 'Helvetica Neue';
+$font-family-weight: bold;
+$border-color: darkgreen;
+
+// --------- COLORS
+
+$primary-color: #222222;
+$secondary-color: rgb(70, 70, 100);
+$shadow-color: rgba(100, 100, 100, 0.6);
+
+// --------- LISTS
+
+$shadow-sizes: 4px, 8px, 24px, 8px;
+
+// --------- MAPS
+
+$font-weights: (
+  'regular': 400,
+  'medium': 500,
+  'bold': 700,
+);
+
+// --------- CALCULATIONS
+
+$width-9: calc(100% - 2 * 8px);
+$img-min-width: min(30%, 300px);
+$img-max-width: max(5vw, 300px);
+
+// --------- FUNCTIONS
+
+@function sum($numbers...) {
+  $sum: 0;
+  @each $number in $numbers {
+    $sum: $sum + $number;
+  }
+  @return $sum;
+}
+
+// --------- FUNCTIONS
+
+@mixin background-alert-theme($color: #cfe2f3) {
+  background-color: $color;
+}
+
+// --------- BOOLEANS
+
+$rounded-corners: true;
+
+.button {
+  border: 1px solid black;
+  border-radius: if($rounded-corners, 1rem, null)
+}

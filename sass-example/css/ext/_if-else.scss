@@ -1,0 +1,15 @@
+@mixin text-color($type) {
+  @if $type == normal {
+    color: black;
+  } @else if $type == warning {
+    color: yellow;
+  } @else if $type == error {
+    color: red;
+  } @else  {
+    @error 'Unknown type #{$type}.';
+  }
+}
+
+.if-else-paragraph {
+  @include text-color(warning);
+}

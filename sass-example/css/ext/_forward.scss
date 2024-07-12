@@ -1,0 +1,23 @@
+@use './at-rules-assets/forward/2' as f2;
+@use './at-rules-assets/forward/3' as f3;
+@use './at-rules-assets/forward/4' as f4;
+@use './at-rules-assets/forward/7' as f5 with (
+  $black: #333
+);
+
+forward-li {
+  @include f2.list-reset;
+}
+
+forward-lu {
+  @include f3.forward-list-reset;
+}
+
+/**
+Impossible, because list-reset is hidden.
+
+forward-li {
+  @include f4.list-reset;
+}
+
+*/

@@ -1,0 +1,30 @@
+$sizes: 1, 2, 3, 4, 5, 6, 7, 8;
+
+@each $size in $sizes {
+  .each-margin-top-#{$size} {
+    margin-top: #{$size * .25}rem;
+  }
+}
+
+$icons: ('eye': '\f112', 'start': '\f12e');
+
+@each $name, $glyph in $icons {
+  .each-icon-#{$name}:before {
+    display: inline-block;
+    content: $glyph;
+  }
+}
+
+$icons2:
+  "eye" "\f112" 12px,
+  "start" "\f12e" 16px,
+  "stop" "\f12f" 10px;
+
+@each $name, $glyph, $size in $icons2 {
+  .each-icon2-#{$name}:before {
+    display: inline-block;
+    font-family: "Icon Font";
+    content: $glyph;
+    font-size: $size;
+  }
+}

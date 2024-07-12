@@ -1,0 +1,11 @@
+$use-border-radius: 3px;
+$use-padding: 6px;
+
+use-button {
+  padding: 0.25rem;
+  line-height: 0;
+}
+
+@mixin mixin-radius {
+  border-radius: $use-border-radius;
+}

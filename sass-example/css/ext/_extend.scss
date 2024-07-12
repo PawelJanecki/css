@@ -1,0 +1,14 @@
+.extend-alert {
+  color: black;
+}
+
+.extend-error {
+  width: 100px;
+  height: 100px;
+  background-color: #444444;
+
+  &--serious {
+    @extend .extend-error, .extend-alert;
+    background-color: red;
+  }
+}

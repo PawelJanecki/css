@@ -1,0 +1,361 @@
+/**
+  values
+*/
+.button {
+  border: 1px solid black;
+  border-radius: 1rem;
+}
+
+/**
+  style rules
+*/
+nav ul {
+  margin: 0;
+  padding: 0;
+}
+nav li {
+  display: inline-block;
+}
+
+.alert ul,
+.alert p,
+.warning ul,
+.warning p {
+  margin-right: 0;
+  margin-left: 0;
+  padding-bottom: 0;
+}
+
+ul > li {
+  list-style-type: none;
+}
+
+h2 + p {
+  border-top: 1px solid gray;
+}
+
+p ~ span {
+  opacity: 0.8;
+}
+
+.enlarge {
+  font-size: 1rem;
+  transition-property: font-size;
+  transition-duration: 4s;
+  transition-delay: 2s;
+}
+.enlarge:hover {
+  font-size: 36px;
+}
+
+.alert:hover {
+  font-weight: bold;
+}
+.alert [dir=rtl] {
+  margin-left: 0;
+  margin-right: 10px;
+}
+[dir=rtl] .alert {
+  margin-left: 10px;
+  margin-right: 0;
+}
+.alert__title {
+  text-decoration: underline;
+}
+.alert--bigger {
+  font-size: 2rem;
+}
+
+.style-rules-reset-button, .style-rules-action-button {
+  box-sizing: border-box;
+  border-top: 1px rgba(0, 0, 0, 0.12) solid;
+  padding: 16px 0;
+  width: 100%;
+}
+.style-rules-reset-button:hover, .style-rules-action-button:hover {
+  border: 2px rgba(0, 0, 0, 0.5) solid;
+}
+
+.style-rules-action-button {
+  color: #4285f4;
+}
+
+.style-rules-reset-button {
+  color: #cddc39;
+}
+
+/**
+  @use
+*/
+use-button {
+  padding: 0.25rem;
+  line-height: 0;
+}
+
+use-header {
+  color: #555;
+  text-decoration: underline;
+}
+
+.use-button {
+  border-radius: 3px;
+  padding: 6px;
+  color: pink;
+  font-size: 1.1rem;
+}
+
+use-code {
+  border-radius: 0.1rem;
+  box-shadow: 0 0.5rem 1rem rgba(85, 85, 85, 0.15);
+}
+
+/**
+  @forward
+*/
+forward-code {
+  border-radius: 0.1rem;
+  box-shadow: 0 0.5rem 1rem rgba(51, 51, 51, 0.15);
+}
+
+forward-li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+forward-lu {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/**
+Impossible, because list-reset is hidden.
+
+forward-li {
+  @include f4.list-reset;
+}
+
+*/
+/**
+  @import
+*/
+.import-theme import-ul import-li {
+  padding: 16px;
+}
+
+/**
+  @mixin & @include
+*/
+mixin-nav mixin-ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+mixin-nav mixin-ul mixin-li {
+  display: inline-block;
+  margin-left: -2px;
+  margin-right: 2em;
+}
+
+.mixin-mail-icon {
+  overflow: hidden;
+  text-indent: -99999em;
+  text-align: left;
+  background-image: url("/images/mail.svg");
+  background-repeat: no-repeat;
+  background-position: 0 50%;
+}
+
+.mixin-mail-tag-icon {
+  overflow: hidden;
+  text-indent: -99999em;
+  text-align: left;
+  background-image: url("/images/mail.svg");
+  background-repeat: no-repeat;
+  background-position: 50% 10%;
+}
+
+mixin-input.name {
+  position: absolute;
+  height: 150px;
+  margin-top: 0px;
+}
+
+mixin-input.address {
+  position: absolute;
+  height: 150px;
+  margin-top: 150px;
+}
+
+mixin-input.zip {
+  position: absolute;
+  height: 150px;
+  margin-top: 300px;
+}
+
+/**
+  @function
+*/
+.function-sidebar {
+  float: left;
+  margin-left: 5px;
+}
+
+/**
+  @extend
+*/
+.extend-alert, .extend-error--serious {
+  color: black;
+}
+
+.extend-error, .extend-error--serious {
+  width: 100px;
+  height: 100px;
+  background-color: #444444;
+}
+.extend-error--serious {
+  background-color: red;
+}
+
+/**
+  @at-root
+*/
+@media at-root-print {
+  .page {
+    width: 8in;
+  }
+}
+.page {
+  color: #111;
+}
+.page {
+  font-size: 1.2em;
+}
+/**
+  @if-else
+*/
+.if-else-paragraph {
+  color: yellow;
+}
+
+/**
+  @each
+*/
+.each-margin-top-1 {
+  margin-top: 0.25rem;
+}
+
+.each-margin-top-2 {
+  margin-top: 0.5rem;
+}
+
+.each-margin-top-3 {
+  margin-top: 0.75rem;
+}
+
+.each-margin-top-4 {
+  margin-top: 1rem;
+}
+
+.each-margin-top-5 {
+  margin-top: 1.25rem;
+}
+
+.each-margin-top-6 {
+  margin-top: 1.5rem;
+}
+
+.each-margin-top-7 {
+  margin-top: 1.75rem;
+}
+
+.each-margin-top-8 {
+  margin-top: 2rem;
+}
+
+.each-icon-eye:before {
+  display: inline-block;
+  content: "\f112";
+}
+
+.each-icon-start:before {
+  display: inline-block;
+  content: "\f12e";
+}
+
+.each-icon2-eye:before {
+  display: inline-block;
+  font-family: "Icon Font";
+  content: "\f112";
+  font-size: 12px;
+}
+
+.each-icon2-start:before {
+  display: inline-block;
+  font-family: "Icon Font";
+  content: "\f12e";
+  font-size: 16px;
+}
+
+.each-icon2-stop:before {
+  display: inline-block;
+  font-family: "Icon Font";
+  content: "\f12f";
+  font-size: 10px;
+}
+
+/**
+  @for
+*/
+for-ul:nth-child(3n+1) {
+  background-color: #004080;
+}
+
+for-ul:nth-child(3n+2) {
+  background-color: #004d99;
+}
+
+for-ul:nth-child(3n+3) {
+  background-color: #0059b3;
+}
+
+/**
+  @while
+*/
+while-margin-top-1 {
+  margin-top: 0.25rem;
+}
+
+while-margin-top-2 {
+  margin-top: 0.5rem;
+}
+
+while-margin-top-3 {
+  margin-top: 0.75rem;
+}
+
+while-margin-top-4 {
+  margin-top: 1rem;
+}
+
+while-margin-top-5 {
+  margin-top: 1.25rem;
+}
+
+while-margin-top-6 {
+  margin-top: 1.5rem;
+}
+
+while-margin-top-7 {
+  margin-top: 1.75rem;
+}
+
+while-margin-top-8 {
+  margin-top: 2rem;
+}
+
+:root {
+  font-size: 8px;
+  --primary-color: #222222;
+}/*# sourceMappingURL=style.css.map */

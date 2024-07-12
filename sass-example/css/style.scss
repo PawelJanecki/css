@@ -1,0 +1,69 @@
+/**
+  values
+*/
+@import 'ext/_values';
+
+/**
+  style rules
+*/
+@import 'ext/style-rules';
+
+/**
+  @use
+*/
+@import 'ext/use';
+
+/**
+  @forward
+*/
+@import 'ext/forward';
+
+/**
+  @import
+*/
+@import 'ext/import';
+
+/**
+  @mixin & @include
+*/
+@import 'ext/mixin-include';
+
+/**
+  @function
+*/
+@import 'ext/function';
+
+/**
+  @extend
+*/
+@import 'ext/extend';
+
+/**
+  @at-root
+*/
+@import 'ext/at-root';
+
+/**
+  @if-else
+*/
+@import 'ext/if-else';
+
+/**
+  @each
+*/
+@import 'ext/each';
+
+/**
+  @for
+*/
+@import 'ext/for';
+
+/**
+  @while
+*/
+@import 'ext/while';
+
+:root {
+  font-size: $font-size;
+  --primary-color: #{$primary-color};
+}

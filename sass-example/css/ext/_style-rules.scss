@@ -1,0 +1,112 @@
+// --------- NESTING
+
+nav {
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+
+  li {
+    display: inline-block;
+  }
+}
+
+.alert,
+.warning {
+  ul,
+  p {
+    margin-right: 0;
+    margin-left: 0;
+    padding-bottom: 0;
+  }
+}
+
+ul > {
+  li {
+    list-style-type: none;
+  }
+}
+
+h2 {
+  + p {
+    border-top: 1px solid gray;
+  }
+}
+
+p {
+  ~ {
+    span {
+      opacity: 0.8;
+    }
+  }
+}
+
+.enlarge {
+  font-size: 1rem;
+  transition: {
+    property: font-size;
+    duration: 4s;
+    delay: 2s;
+  }
+
+  &:hover {
+    font-size: 36px;
+  }
+}
+
+// --------- PARENT SELECTOR
+
+.alert {
+  &:hover {
+    font-weight: bold;
+  }
+
+  & [dir='rtl'] {
+    margin-left: 0;
+    margin-right: 10px;
+  }
+
+  [dir='rtl'] & {
+    margin-left: 10px;
+    margin-right: 0;
+  }
+
+  &__title {
+    text-decoration: underline;
+  }
+
+  &--bigger {
+    font-size: 2rem;
+  }
+}
+
+// --------- INTERPOLATION
+
+@mixin define-header($seq) {
+  h#{$seq} {
+    font-size: #{$seq}rem;
+  }
+}
+
+// --------- PLACEHOLDER
+
+%toolbelt {
+  box-sizing: border-box;
+  border-top: 1px rgba(#000, .12) solid;
+  padding: 16px 0;
+  width: 100%;
+
+  &:hover {
+    border: 2px rgba(#000, .5) solid;
+  }
+}
+
+.style-rules-action-button {
+  @extend %toolbelt;
+  color: #4285f4;
+}
+
+.style-rules-reset-button {
+  @extend %toolbelt;
+  color: #cddc39;
+}
